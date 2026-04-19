@@ -7,7 +7,7 @@ import { Prompt, CreatePrompt } from '../interfaces/prompt';
   providedIn: 'root'
 })
 export class PromptService {
-  private apiUrl = 'http://localhost:8000/prompts/';
+private apiUrl = 'https://emplay-image-genai-project.onrender.com/prompts/';
 
   constructor(private http: HttpClient) {}
 
