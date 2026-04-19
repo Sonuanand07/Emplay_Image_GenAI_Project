@@ -3,7 +3,7 @@ set -e
 
 # Wait for Postgres
 echo "Waiting for Postgres..."
-until nc -z db 5432; do
+until nc -z db 5432 > /dev/null 2>&1; do
   echo "Postgres not ready - sleeping"
   sleep 2
 done
