@@ -1,0 +1,34 @@
+.prompt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.prompt-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+}
+
+.prompt-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.prompt-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.complexity-badge {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+

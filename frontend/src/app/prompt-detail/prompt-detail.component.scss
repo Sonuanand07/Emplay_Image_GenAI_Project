@@ -1,0 +1,34 @@
+.detail-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.prompt-content {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-left: 4px solid #007bff;
+  line-height: 1.6;
+  margin: 2rem 0;
+  white-space: pre-wrap;
+}
+
+.view-count {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 1.1em;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+

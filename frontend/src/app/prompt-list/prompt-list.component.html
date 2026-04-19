@@ -1,0 +1,19 @@
+
+<div>
+  <h1>AI Prompts Library</h1>
+  <p *ngIf="prompts.length === 0">No prompts yet. <a routerLink="/add-prompt">Add one</a></p>
+  <div class="prompt-grid">
+    <div *ngFor="let p of prompts" class="prompt-card">
+      <h3>
+        <a [routerLink]="['/prompts', p.id]">
+          {{p.title}}
+        </a>
+      </h3>
+      <div class="complexity-badge {{getComplexityClass(p.complexity)}}">
+        Complexity: {{p.complexity}}/10
+      </div>
+      <small>Created: {{p.created_at | date:'short'}}</small>
+    </div>
+  </div>
+</div>
+

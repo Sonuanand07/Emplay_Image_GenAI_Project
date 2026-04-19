@@ -1,0 +1,18 @@
+
+<div *ngIf="prompt; else loading">
+  <h1>{{prompt.title}}</h1>
+  <div class="detail-meta">
+    <span class="complexity-badge complexity-{{prompt.complexity}}">Complexity: {{prompt.complexity}}/10</span>
+    <span class="view-count">Views: {{prompt.view_count || 0}}</span>
+    <small>Created: {{prompt.created_at | date:'short'}}</small>
+  </div>
+  <div class="prompt-content">
+    {{prompt.content}}
+  </div>
+  <a routerLink="/prompts" class="back-btn">← Back to List</a>
+</div>
+
+<ng-template #loading>
+  <p>Loading prompt...</p>
+</ng-template>
+
