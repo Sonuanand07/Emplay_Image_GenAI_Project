@@ -101,3 +101,11 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOW_CREDENTIALS = True
 
+# Database URL support (Render/Heroku)
+try:
+    import dj_database_url
+    if os.getenv('DATABASE_URL'):
+        DATABASES['default'] = dj_database_url.parse(os.getenv('DATABASE_URL'), conn_max_age=600)
+except ImportError:
+    pass
+
